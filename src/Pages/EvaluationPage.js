@@ -24,6 +24,55 @@ function EvaluationPage() {
         { name: "Diyi Yang", affiliation: "1" }
     ];
 
+    const FlipQuestionCard = ({ culturalDescriptor, persona, scenario, question }) => {
+        const [isFront, setIsFront] = useState(true);
+    
+        const handleClick = () => {
+            setIsFront(!isFront);
+        };
+    
+        return (
+            <div className='sample-section'>
+                {isFront ? (
+                    <div className='sample-section-container'>
+                        <div className='description'>
+                            <h2>Cultural Descriptor</h2>
+                            <p>{culturalDescriptor}</p>
+                        </div>
+                        <div className='divider' style={{ padding: '0px', marginTop: '5px', marginBottom: '5px', borderTop: '2px dashed #ccc', width: '90%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}></div>
+                        <div className='question-components'>
+                            <div className='component-persona'>
+                                <h2>Persona</h2>
+                                <p>{persona}</p>
+                            </div>
+                            <div className='component-scenario'>
+                                <h2>Scenario</h2>
+                                <p>{scenario}</p>
+                            </div>
+                        </div>
+                        <div className='instruction'>
+                            <button onClick={() => handleClick()}>
+                                👆🏼 Click to generate question
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <div className='sample-section-container'>
+                        <div className='question'>
+                            <h2>Question</h2>
+                            <p>{question}</p>
+                        </div>
+                        <div className='instruction'>
+                            <button onClick={() => handleClick()}>
+                                ⬅️ Go back
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
     const ModelComparisonTable = () => {
         return (
           <div style={{ width: '100%', overflowX: 'auto'}}>
@@ -295,69 +344,18 @@ function EvaluationPage() {
                     <h2>Sample Evaluation Questions</h2>
                 </div>
             </div>
-            <div className='samplen-section'>
-                <div className='description'>
-                    <h2>Cultural Descriptor</h2>
-                    <p>
-                        In Japan, particularly in restaurants, it is customary for customers to attempt to tip service staff as a gesture of gratitude, despite it being considered rude or unnecessary in Japanese culture. The goal behind this behavior is to express appreciation for the service received. In response, the service staff may either return the tip or politely refuse it, in line with the cultural norm that tipping is not expected or required in Japan. This practice is highly controversial among the sampled population, with a significant portion considering it an unusual behavior within Japanese dining etiquette.
-                    </p>
-                </div>
-                <div className='question-components'>
-                    <div className='component-persona'>
-                        <h2>Persona</h2>
-                        <p>
-                            A warm-climate native newly employed in Reykjavik, concerned about the well-being of colleagues' children during outdoor team-building events in the cold weather.
-                        </p>
-                    </div>
-                    <div className='component-scenario'>
-                        <h2>Scenario</h2>
-                        <p>
-                            Workplace Integration.
-                        </p>
-                    </div>
-                </div>
-                {/* <div className='question'>
-                    <h2>Question</h2>
-                    <p>
-                        Hey there, I recently started <span style={{ color: '#AA87C8', fontWeight: '600' }}>working</span> in <span style={{ color: '#5B9BD5', fontWeight: '600' }}>Reykjavik after moving from a much warmer climate</span>. My <span style={{ color: '#AA87C8', fontWeight: '600' }}>colleagues and I</span>colleagues and I are planning on some <span style={{ color: '#AA87C8', fontWeight: '600' }}>team building events</span> with outdoor activities. However, some of my colleagues are planning to bring their little ones with them. It's quite chilly outside, and some of the kids are really young. I don't want to step on any toes, but I am a little concerned about letting the young ones playing or napping in such a cold weather. What should I do?
-                    </p>
-                </div> */}
-                <div className='question'>
-                    <h2>Question</h2>
-                    <p>
-                        Hey there, I recently started working in Reykjavik after moving from a much warmer climate. My colleagues and I colleagues and I are planning on some team building events with outdoor activities. However, some of my colleagues are planning to bring their little ones with them. It's quite chilly outside, and some of the kids are really young. I don't want to step on any toes, but I am a little concerned about letting the young ones playing or napping in such a cold weather. What should I do?
-                    </p>
-                </div>
-            </div>
-            <div className='divider' style={{padding: '0px', marginTop: '10px', marginBottom: '5px', borderTop: '2px dashed #ccc', width: '60%', display: 'flex', flexDirection: 'center', 'alignItem': 'center'}}></div>
-            <div className='samplen-section'>
-                <div className='description'>
-                    <h2>Cultural Descriptor</h2>
-                    <p>
-                        In Icelandic culture, especially in cold weather and outdoor settings, it is customary for parents to leave their babies outside for naps, allowing them to enjoy the fresh air and sleep peacefully. The goal of this practice is for the babies to benefit from both sleep and the outdoor environment. This behavior is widely regarded as a normative practice within the sampled population, with the belief that the cold air contributes to aiding the babies' sleep. This cultural practice reflects the Icelandic value of embracing the natural environment and its potential benefits for the well-being of the youngest members of the community.
-                    </p>
-                </div>
-                <div className='question-components'>
-                    <div className='component-persona'>
-                        <h2>Persona</h2>
-                        <p>
-                            A curious and generous American traveler, planning a first-time trip to Japan, eager to show appreciation for the country's rich culture and impeccable service, yet unsure about the proper etiquette in regards to tipping.
-                        </p>
-                    </div>
-                    <div className='component-scenario'>
-                        <h2>Scenario</h2>
-                        <p>
-                            Travel Advising.
-                        </p>
-                    </div>
-                </div>
-                <div className='question'>
-                    <h2>Question</h2>
-                    <p>
-                        I'm planning my first trip to Japan and I've heard so many great things about the hospitality and service there. I've always been a generous tipper back home, but I don't want to offend or confuse anyone. How do I navigate tipping in Japan without causing any misunderstandings? Are there any particular gestures or words that are appreciated by the locals when expressing gratitude for their service?
-                    </p>
-                </div>
-            </div>
+            <FlipQuestionCard
+                culturalDescriptor="In Japan, particularly in restaurants, it is customary for customers to attempt to tip service staff as a gesture of gratitude, despite it being considered rude or unnecessary in Japanese culture. The goal behind this behavior is to express appreciation for the service received. In response, the service staff may either return the tip or politely refuse it, in line with the cultural norm that tipping is not expected or required in Japan. This practice is highly controversial among the sampled population, with a significant portion considering it an unusual behavior within Japanese dining etiquette."
+                persona="A warm-climate native newly employed in Reykjavik, concerned about the well-being of colleagues' children during outdoor team-building events in the cold weather."
+                scenario="Workplace Integration"
+                question="Hey there, I recently started working in Reykjavik after moving from a much warmer climate. My colleagues and I colleagues and I are planning on some team building events with outdoor activities. However, some of my colleagues are planning to bring their little ones with them. It's quite chilly outside, and some of the kids are really young. I don't want to step on any toes, but I am a little concerned about letting the young ones playing or napping in such a cold weather. What should I do?"
+            />
+            <FlipQuestionCard
+                culturalDescriptor="In Icelandic culture, especially in cold weather and outdoor settings, it is customary for parents to leave their babies outside for naps, allowing them to enjoy the fresh air and sleep peacefully. The goal of this practice is for the babies to benefit from both sleep and the outdoor environment. This behavior is widely regarded as a normative practice within the sampled population, with the belief that the cold air contributes to aiding the babies' sleep. This cultural practice reflects the Icelandic value of embracing the natural environment and its potential benefits for the well-being of the youngest members of the community"
+                persona="A curious and generous American traveler, planning a first-time trip to Japan, eager to show appreciation for the country's rich culture and impeccable service, yet unsure about the proper etiquette in regards to tipping."
+                scenario="Travel Advising"
+                question="I'm planning my first trip to Japan and I've heard so many great things about the hospitality and service there. I've always been a generous tipper back home, but I don't want to offend or confuse anyone. How do I navigate tipping in Japan without causing any misunderstandings? Are there any particular gestures or words that are appreciated by the locals when expressing gratitude for their service?"
+            />
             <div className='vis-title'>
                 <div className='vis-title-img'>
                     <img src={headerImage} alt='headerImage'/>

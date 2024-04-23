@@ -168,7 +168,7 @@
     pointer-events: none;
 }
 
-.agreementBarContainer:hover .agreementBarValue {
+.agreementBarContainer .agreementBarValue {
     display: block;
 }
 
@@ -428,4 +428,17 @@
     margin-bottom: 10px;
     line-height: 1.5;
     color: #353535;
+}
+
+.data-source-selector {
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    height: auto;
+    margin-left: 50px;
 }

@@ -24,6 +24,7 @@ function DataPage() {
     const [codeIcon, setCodeIcon] = useState(link_black_icon);
     const [paperIcon, setPaperIcon] = useState(link_black_icon);
     const [dataIcon, setDataIcon] = useState(link_black_icon);
+    const [dataSource, setDataSource] = React.useState('tiktok');
     const handleClick = () => {
         setIsFront(!isFront);
     };
@@ -187,7 +188,7 @@ function DataPage() {
                     <FlipCard
                         title="Cultural Group"
                         frontContent="Groups of people with similar cultural backgrounds"
-                        backContent="e.g. American, Californian, Asian American, international student people from small towns"
+                        backContent="e.g. American, Californian, Asian American, international student, people from small towns"
                         frontImage={culture_group_icon}
                         frontImageSize='60px'
                     />
@@ -270,6 +271,104 @@ function DataPage() {
                     <img src={headerImage} alt='headerImage'/>
                 </div>
                 <div className='vis-title-content'>
+                    <h2>Data Samples</h2>
+                </div>
+            </div>
+            <div className='data-source-selector'>
+                <button className={dataSource === 'tiktok' ? 'tiktok-selectedButton' : 'tiktok-unselectedButton'} onClick={() => setDataSource('tiktok')}>
+                    TikTok
+                </button>
+                <button className={dataSource === 'reddit' ? 'reddit-selectedButton' : 'reddit-unselectedButton'} onClick={() => setDataSource('reddit')}>
+                    Reddit
+                </button>
+            </div>
+            <div className='insightContent'>
+                {dataSource === 'tiktok' ? (
+                    <>
+                    <ContentCard
+                        culturalGroup="American"
+                        context="in various dining settings including diners, buffets, and fast food restaurants"
+                        goal="to get free refills"
+                        agreement="0.8"
+                        actor="servers and customers"
+                        recipient="customers and coffee shop staff"
+                        actorBehavior="servers offer free refills, customers expect and ask for them, and sometimes complain when not provided"
+                        recipientBehavior="provide refills"
+                        otherDescription="free refills are common for water and soft drinks, but not for alcohol or smoothies"
+                        topic="Drinking and Alcohol"
+                    />
+                    <ContentCard
+                        culturalGroup="American"
+                        context="in the United States"
+                        goal="maintain and enhance safety"
+                        agreement="0.7"
+                        actor="people and government"
+                        recipient="citizens and society"
+                        actorBehavior="prioritize safety through various measures, including military strength, gun control, and emergency preparedness"
+                        recipientBehavior="respond to safety concerns with varying perceptions"
+                        otherDescription="safety levels and concerns vary across states and contexts"
+                        topic="Safety and Security"
+                    />
+                    <ContentCard
+                        culturalGroup="American"
+                        context="in the United States, particularly in daycare settings"
+                        goal="find suitable and affordable childcare"
+                        agreement="0.9"
+                        actor="parents"
+                        recipient="daycare providers"
+                        actorBehavior="actively seek, pay for, and express frustration over the high cost of daycare, often preferring more home-like settings"
+                        recipientBehavior="provide care and follow regulations"
+                        otherDescription="high cost of daycare and challenges in finding trustworthy caregivers"
+                        topic="Family Dynamics"
+                    />
+                    </>
+                ) : (
+                    <>
+                    <ContentCard
+                        culturalGroup="Australian"
+                        context="shopping and environmental conservation"
+                        goal="reduce plastic waste and encourage sustainability"
+                        agreement="1.0"
+                        actor="government, stores, and customers"
+                        recipient="customers and stores"
+                        actorBehavior="implement and utilize reusable bags to reduce plastic usage"
+                        recipientBehavior="use reusable bags and pay for plastic bags"
+                        otherDescription="government imposes fees on plastic bags, stores charge for bags, and customers bring reusable bags to avoid fees"
+                        topic="Environmental Adaptation and Sustainability"
+                    />
+                    <ContentCard
+                        culturalGroup="Australian"
+                        context="in bars, clubs, and restaurants"
+                        goal="order and consume drinks"
+                        agreement="1.0"
+                        actor="people, including customers and bartenders"
+                        recipient="bartenders and servers"
+                        actorBehavior="order, serve, and consume alcoholic and non-alcoholic beverages, with a preference for local and unique drinks like lemon lime and bitters"
+                        recipientBehavior="serve and offer free refills"
+                        otherDescription="awareness of chasers and the practice of nudging in when possible"
+                        topic="Drinking and Alcohol"
+                    />
+                    <ContentCard
+                        culturalGroup="Australian"
+                        context="employment and work-life balance"
+                        goal="to encourage work-life balance and provide extra income"
+                        agreement="1.0"
+                        actor="employers and employees"
+                        recipient="employers and employees"
+                        actorBehavior="practice leave loading, where employees receive extra pay for taking annual leave"
+                        recipientBehavior="take annual leave and receive extra pay"
+                        otherDescription="minimum entitlements and 17% extra on days taken leave"
+                        topic="Workplace"
+                    />
+                    </>
+                )}
+                </div>
+
+            <div className='vis-title'>
+                <div className='vis-title-img'>
+                    <img src={headerImage} alt='headerImage'/>
+                </div>
+                <div className='vis-title-content'>
                     <h2>Construction Pipeline</h2>
                 </div>
             </div>
@@ -280,122 +379,6 @@ function DataPage() {
                 <p>
                     Centering on the proposed taxonomy, we propose a bottom-up pipeline to construct cultural descriptors from online communities. Starting from comments on online communities, we will (1) select culture-related comments and  extract mentioned cultural descriptors, then (2) cluster these descriptors and summarize the clusters, and finally (3) post-process them to get agreement value and remove bad contents. Each step is validated by human evaluation.
                 </p>
-            </div>
-            <div className='vis-title'>
-                <div className='vis-title-img'>
-                    <img src={headerImage} alt='headerImage'/>
-                </div>
-                <div className='vis-title-content'>
-                    <h2>TikTok Data Samples</h2>
-                </div>
-            </div>
-            <div className='insightContent'>
-                <ContentCard
-                    culturalGroup="American"
-                    context="in various dining settings including diners, buffets, and fast food restaurants"
-                    goal="to get free refills"
-                    agreement="0.8"
-                    actor="servers and customers"
-                    recipient="customers and coffee shop staff"
-                    actorBehavior="servers offer free refills, customers expect and ask for them, and sometimes complain when not provided"
-                    recipientBehavior="provide refills"
-                    otherDescription="free refills are common for water and soft drinks, but not for alcohol or smoothies"
-                    topic="Drinking and Alcohol"
-                />
-                <ContentCard
-                    culturalGroup="American"
-                    context="in the United States"
-                    goal="maintain and enhance safety"
-                    agreement="0.7"
-                    actor="people and government"
-                    recipient="citizens and society"
-                    actorBehavior="prioritize safety through various measures, including military strength, gun control, and emergency preparedness"
-                    recipientBehavior="respond to safety concerns with varying perceptions"
-                    otherDescription="safety levels and concerns vary across states and contexts"
-                    topic="Safety and Security"
-                />
-                <ContentCard
-                    culturalGroup="American"
-                    context="in the United States, particularly in daycare settings"
-                    goal="find suitable and affordable childcare"
-                    agreement="0.9"
-                    actor="parents"
-                    recipient="daycare providers"
-                    actorBehavior="actively seek, pay for, and express frustration over the high cost of daycare, often preferring more home-like settings"
-                    recipientBehavior="provide care and follow regulations"
-                    otherDescription="high cost of daycare and challenges in finding trustworthy caregivers"
-                    topic="Family Dynamics"
-                />
-            </div>
-            <div className='vis-title'>
-                <div className='vis-title-img'>
-                    <img src={headerImage} alt='headerImage'/>
-                </div>
-                <div className='vis-title-content'>
-                    <h2>Reddit Data Samples</h2>
-                </div>
-            </div>
-            <div className='insightContent'>
-                <ContentCard
-                    culturalGroup="Australian"
-                    context="shopping and environmental conservation"
-                    goal="reduce plastic waste and encourage sustainability"
-                    agreement="1.0"
-                    actor="government, stores, and customers"
-                    recipient="customers and stores"
-                    actorBehavior="implement and utilize reusable bags to reduce plastic usage"
-                    recipientBehavior="use reusable bags and pay for plastic bags"
-                    otherDescription="government imposes fees on plastic bags, stores charge for bags, and customers bring reusable bags to avoid fees"
-                    topic="Environmental Adaptation and Sustainability"
-                />
-                <ContentCard
-                    culturalGroup="Australian"
-                    context="in bars, clubs, and restaurants"
-                    goal="order and consume drinks"
-                    agreement="1.0"
-                    actor="people, including customers and bartenders"
-                    recipient="bartenders and servers"
-                    actorBehavior="order, serve, and consume alcoholic and non-alcoholic beverages, with a preference for local and unique drinks like lemon lime and bitters"
-                    recipientBehavior="serve and offer free refills"
-                    otherDescription="awareness of chasers and the practice of nudging in when possible"
-                    topic="Drinking and Alcohol"
-                />
-                <ContentCard
-                    culturalGroup="Australian"
-                    context="employment and work-life balance"
-                    goal="to encourage work-life balance and provide extra income"
-                    agreement="1.0"
-                    actor="employers and employees"
-                    recipient="employers and employees"
-                    actorBehavior="practice leave loading, where employees receive extra pay for taking annual leave"
-                    recipientBehavior="take annual leave and receive extra pay"
-                    otherDescription="minimum entitlements and 17% extra on days taken leave"
-                    topic="Workplace"
-                />
-                {/* <ContentCard
-                    culturalGroup=""
-                    context=""
-                    goal=""
-                    agreement=""
-                    actor=""
-                    recipient=""
-                    actorBehavior=""
-                    recipientBehavior=""
-                    otherDescription=""
-                    topic=""
-                /> */}
-                {/* <ContentCard
-                    culturalGroup=""
-                    context=""
-                    goal=""
-                    agreement=""
-                    actor=""
-                    recipient=""
-                    actorBehavior=""
-                    recipientBehavior=""
-                    otherDescription=""
-                    topic=""
-                /> */}
             </div>
         </div>
     )

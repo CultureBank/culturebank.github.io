@@ -6,11 +6,14 @@ import * as d3 from 'd3';
 import cloud from 'd3-cloud';
 import { NavLink } from 'react-router-dom';
 import tiktokGeoData from '../data/tiktok_region_distribution.json'
+import redditGeoData from '../data/reddit_region_distribution.json'
 import tiktokTopicData from '../data/tiktok_topic_distribution.json'
+import redditTopicData from '../data/reddit_topic_distribution.json'
 import intro_fig from "../image/intro_fig.svg";
 import icon_fig from "../image/icon.svg";
 import link_black_icon from "../image/link-black.png";
 import link_white_icon from "../image/link-white.png";
+import { colors } from '@mui/material';
 
 const WordCloud = ({ data }) => {
     const ref = useRef();
@@ -57,7 +60,7 @@ const WordCloud = ({ data }) => {
         drawWordCloud();
     }, [data]);
 
-    return <svg ref={ref} style={{ width: '100%', height: '600px' }}></svg>;
+    return <svg ref={ref} style={{ width: '100%', height: '500px', zIndex: '900'}}></svg>;
 };
 
 function HomePage() {
@@ -76,10 +79,22 @@ function HomePage() {
             `Percentage: ${(Math.round((count / sum_count * 100) * 100) / 100).toFixed(2)}%`
         ])
     ];
+    const redditGeoChartsData = [
+        ['Region', 'Count', { role: 'tooltip', type: 'string', p: { html: true } }],
+        ...Object.entries(redditGeoData).map(([country, count]) => [
+            country, 
+            count, 
+            `Percentage: ${(Math.round((count / sum_count * 100) * 100) / 100).toFixed(2)}%`
+        ])
+    ];
     const tiktokTopicChartsData = [
         ['Topic', 'Count'],
         ...Object.entries(tiktokTopicData).map(([topic, count]) => [topic, count])
     ];
+    const redditTopicChartsData = [
+        ['Topic', 'Count'],
+        ...Object.entries(redditTopicData).map(([topic, count]) => [topic, count])
+    ]
     const authors = [
         { name: "Weiyan Shi", affiliation: "1" },
         { name: "Ryan Li", affiliation: "1" },
@@ -90,6 +105,24 @@ function HomePage() {
         { name: "Rogério Abreu de Paula", affiliation: "2" },
         { name: "Diyi Yang", affiliation: "1" }
     ];
+
+    function getWordCloudData(source) {
+        switch (source) {
+          case 'tiktok':
+            return tiktokTopicChartsData;
+          case 'reddit':
+            return redditTopicChartsData;
+        }
+    }
+
+    function getGeoChartData(source) {
+        switch (source) {
+          case 'tiktok':
+            return tiktokGeoChartsData;
+          case 'reddit':
+            return redditGeoChartsData;
+        }
+    }
 
     return (
         <div className='main'>
@@ -187,7 +220,7 @@ function HomePage() {
                 <div className='vis-map'>
                     <Chart
                         chartType="GeoChart"
-                        data={tiktokGeoChartsData}
+                        data={getGeoChartData(mapSource)}
                         width="90%"
                         height="550px"
                         options={{
@@ -217,7 +250,7 @@ function HomePage() {
                 </div>
                 <div className='vis-map'>
                     <div className="vis-wordCloud">
-                        <WordCloud data={tiktokTopicChartsData} />
+                        <WordCloud data={getWordCloudData(figSource)} />
                     </div>
                 </div>
             </div>

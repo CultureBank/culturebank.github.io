@@ -5,11 +5,14 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100wh;
-    height: 100vh;
-    overflow-y: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-y: scroll;
     overflow-x: hidden;
     font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* .title {
@@ -53,6 +56,7 @@
     margin-top: 0px;
     margin-bottom: 10px;
 }
+
 .unselectedButton {
     height: 30px;
     text-decoration: none;
@@ -61,7 +65,7 @@
     border: 2px solid #353535;
     border-radius: 30px;
     width: 150px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -91,7 +95,7 @@
     border-radius: 30px;
     width: 150px;
     height: 30px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -123,7 +127,7 @@
     border: 2px solid #353535;
     border-radius: 30px;
     width: 150px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -150,8 +154,10 @@
 }
 
 .authors-list {
+    text-align: center;
     margin-top: -10px;
     margin-bottom: 10px;
+    width: 80%;
 }
 
 .author-block {
@@ -210,9 +216,9 @@
 
 .quote-content {
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
-    text-align: center;
+    text-align: start;
     font-style: italic;
     font-family: "Ubuntu", sans-serif;
     line-height: 1.5;
@@ -221,7 +227,7 @@
 .quote-source {
     width: 100%;
     margin-top: -10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     text-align: end;
     font-style: italic;
@@ -230,10 +236,9 @@
 }
 
 .abstract {
-    width: 80%;
+    width: 60%;
     padding: 10px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     text-align: start;
     font-family: "Ubuntu", sans-serif;
@@ -241,13 +246,13 @@
 }
 
 .visualization {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: top;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    padding: 0px;
 }
 
 .section-vis {
@@ -265,6 +270,10 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: 400px;
+    padding: 0;
 }
 
 .vis-title-img {
@@ -274,20 +283,46 @@
 }
 
 .vis-title-img img {
-    width: 30%;
+    width: 20%;
     height: auto;
 }
 
 .vis-title-content {
+    margin-left: -20px;
     display: inline-block;
 }
 
 .vis-title-content h2 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     margin: 0;
     display: inline;
     color: #353535;
+}
+
+.vis-map {
+    width: 100%;
+    height: 600px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vis-wordCloud {
+    width: 100%;
+    height: 600px;
+    margin-right: 10%;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
 }
 
 .data-source-selector {
@@ -309,7 +344,7 @@
     border-radius: 8px 0px 0px 8px;
     width: 100px;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer; 
     transition: all 0.3s ease;
@@ -326,7 +361,7 @@
     border-radius: 0px 8px 8px 0px;
     width: 100px;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer; 
     transition: all 0.3s ease;
@@ -341,7 +376,7 @@
     border-radius: 8px 0px 0px 8px;
     width: 100px;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer; 
     transition: all 0.3s ease;
@@ -356,7 +391,7 @@
     border-radius: 0px 8px 8px 0px;
     width: 100px;
     height: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     cursor: pointer; 
     transition: all 0.3s ease;

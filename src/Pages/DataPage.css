@@ -282,7 +282,7 @@
     padding-bottom: 40px;
 }
 
-.vis-title {
+/* .vis-title {
     width: 80%;
     display: flex;
     align-items: start;
@@ -296,12 +296,12 @@
 }
 
 .vis-title-content h2 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     margin: 0;
     display: inline;
     color: #353535;
-}
+} */
 
 .taxonomy-col {
     display: flex;

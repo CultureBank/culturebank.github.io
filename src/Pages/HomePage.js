@@ -22,7 +22,7 @@ const WordCloud = ({ data }) => {
 
         const drawWordCloud = () => {
             const width = 1800;
-            const height = 600;
+            const height = 800;
 
             const layout = cloud()
                 .size([width, height])
@@ -44,8 +44,9 @@ const WordCloud = ({ data }) => {
                     .data(words)
                     .enter().append("text")
                     .style("font-size", d => `${d.size * 0.9}px`)
-                    .style("font-family", "Ubuntu")
-                    .style("font-weight", "bold")
+                    .style("font-family", "Ubuntu, sans-serif")
+                    .style("font-weight", "medium")
+                    .style("line-height", "1.2")
                     .style("fill", (d, i) => d3.schemeTableau10[i % 10])
                     .attr("text-anchor", "middle")
                     .attr("transform", d => `translate(${[d.x, d.y]})rotate(${d.rotate})`)
@@ -157,7 +158,7 @@ function HomePage() {
                 </a>
             </div>
             <div className='intro-fig-container'>
-                <img src={intro_fig} style={{ width: '75%', maxWidth: '2500px'}} alt="introduction_fig" />
+                <img src={intro_fig} style={{ width: '70%', maxWidth: '2500px'}} alt="introduction_fig" />
             </div>
             <div className='quote'>
                 <p className='quote-content'> "Globally, people express pride, celebrate, and respect cultural diversity, while acknowledging and working towards reducing cultural bias" </p>
@@ -187,8 +188,8 @@ function HomePage() {
                     <Chart
                         chartType="GeoChart"
                         data={tiktokGeoChartsData}
-                        width="100%"
-                        height="600px"
+                        width="90%"
+                        height="550px"
                         options={{
                             colorAxis: { colors: ['#9BB0C1', '#6C99BD', '#497DA7', '#51829B', '#207098', '#016599', '#275A74'] },
                             tooltip: { isHtml: true }, 
@@ -203,7 +204,7 @@ function HomePage() {
                         <img src={headerImage} alt='headerImage'/>
                     </div>
                     <div className='vis-title-content'>
-                        <h2>Topics Distribution</h2>
+                        <h2>Topic Distribution</h2>
                     </div>
                 </div>
                 <div className='data-source-selector'>

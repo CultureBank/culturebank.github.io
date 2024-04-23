@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.491b8620.css",
+    "main.js": "/static/js/main.fa524c16.js",
+    "static/js/453.fae39ed3.chunk.js": "/static/js/453.fae39ed3.chunk.js",
+    "static/media/intro_fig.svg": "/static/media/intro_fig.110003093f9b567bc9f9a5b0344e8de4.svg",
+    "static/media/eval_fig.svg": "/static/media/eval_fig.2eca44a6a86d9c6dc6c7012e25ee3526.svg",
+    "static/media/win_rate.png": "/static/media/win_rate.d277ebdc1c9fe1724955.png",
+    "static/media/data_framework.svg": "/static/media/data_framework.0dd6b707f36c969a20151a038373b00a.svg",
+    "static/media/goal.png": "/static/media/goal.21f547df3a7ce1f02e30.png",
+    "static/media/agreement.png": "/static/media/agreement.f516bc55bc358a402b0d.png",
+    "static/media/context.png": "/static/media/context.e581569815a0f5d26673.png",
+    "static/media/behavior.png": "/static/media/behavior.37af556bf3e6a4bfb57c.png",
+    "static/media/link-black.png": "/static/media/link-black.2d0ff3bcfb7e733706f2.png",
+    "static/media/other_description.png": "/static/media/other_description.2227af80db81efa4eed7.png",
+    "static/media/culture_group.png": "/static/media/culture_group.06ba77469ea166f64e64.png",
+    "static/media/relation.png": "/static/media/relation.fbb7c11ee4f1a6649713.png",
+    "static/media/link-white.png": "/static/media/link-white.8fc754fa67b5b2222404.png",
+    "static/media/actor.png": "/static/media/actor.fa4cb355d15f50782ce9.png",
+    "static/media/recipient.png": "/static/media/recipient.dce6c6cd5080ab83f0f2.png",
+    "static/media/topic.png": "/static/media/topic.135f544602c21a4a40f2.png",
+    "static/media/icon.svg": "/static/media/icon.26d57259b116e4ab1ed5734c13539317.svg",
+    "index.html": "/index.html",
+    "main.491b8620.css.map": "/static/css/main.491b8620.css.map",
+    "main.fa524c16.js.map": "/static/js/main.fa524c16.js.map",
+    "453.fae39ed3.chunk.js.map": "/static/js/453.fae39ed3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.491b8620.css",
+    "static/js/main.fa524c16.js"
+  ]
+}

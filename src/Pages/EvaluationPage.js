@@ -27,7 +27,7 @@ function EvaluationPage() {
     const ModelComparisonTable = () => {
         return (
           <div style={{ width: '100%', overflowX: 'auto'}}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: "Ubuntu, sans-serif", fontSize: '22px', fontWeight: '300'}}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: "Ubuntu, sans-serif", fontSize: '16px', fontWeight: '300', lineHeight: '0.6'}}>
               <thead>
                 <tr>
                   <th style={{ borderBottom: '2px solid #000', padding: '10px', paddingLeft: '40px', paddingRight: '40px', textAlign: 'left' }}>Model</th>
@@ -280,7 +280,7 @@ function EvaluationPage() {
                 </div>
             </div>
             <div className='intro-fig-container'>
-                <img src={eval_fig} style={{ width: '60%'}} alt="eval_fig" />
+                <img src={eval_fig} style={{ width: '50%'}} alt="eval_fig" />
             </div>
             <div className='intro-text'>
                 <p>
@@ -386,7 +386,7 @@ function EvaluationPage() {
                 </div>
             </div>
             <div className='intro-fig-container'>
-                <img src={win_rate_fig} style={{ width: '850px'}} alt="win_rate_fig" />
+                <img src={win_rate_fig} style={{ width: '600px'}} alt="win_rate_fig" />
             </div>
             <div className='results-content'>
                 <p>

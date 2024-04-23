@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 import icon_fig from "../image/icon.svg";
 import link_black_icon from "../image/link-black.png";
 import link_white_icon from "../image/link-white.png";
+import temp_analysis_1 from '../image/reddit_entertainment_temporal_analysis.png';
+import temp_analysis_2 from '../image/reddit_topics_temporal_analysis.png';
 
 function FuturePage() {
     const [codeIcon, setCodeIcon] = useState(link_black_icon);
@@ -98,10 +100,29 @@ function FuturePage() {
                 </div>
             <div className='content-list'>
                 <ul>
-                    <li>
-                        <h2>Data source</h2>
+                    <li className='content-list-section'>
+                        <h2 className='content-list-head'>📱 Data source</h2>
                         <p>Different data sources cover various aspects of culture: official documents like textbooks provide factual cultural knowledge, while online communities like social media offer insights on everyday cultural practices. So we should invite diverse data sources to capture the full spectrum of culture in the future.</p>
                     </li>
+                    <li className='content-list-section'>
+                        <h2 className='content-list-head'>📂 Data contents</h2>
+                        <p>Culture is multifaceted, so it is also important to factor in various dimensions in the data content.</p>
+                        <div className='content-sublist'>
+                            <p>🫂 <span style={{fontWeight:'600'}}>Cross-culture behavior: </span> it is crucial to understand cross-culture behaviors to facilitate effective communication</p>
+                            <p>🗣️ <span style={{fontWeight:'600'}}>Perspectives: </span>to track through whose lens we are looking at a certain culture behavior, because different perspectives may lead to different understanding of the same cultural practice</p>
+                            <p>🕐 <span style={{fontWeight:'600'}}>Time: </span>future data efforts should also consider the time factor to enable temporal analysis</p>
+                            <p>💱 <span style={{fontWeight:'600'}}>Multilingual: </span>to capture the cultural nuances, in the future, we should develop multilingual multicultural knowledge banks</p>
+                            <p>🖼️ <span style={{fontWeight:'600'}}>Multimodality: </span>to include different modalities to capture the full spectrum of culture, from non-verbal communication cues, to rituals and arts, and so on in the future</p>
+                        </div>
+                    </li>
+                    <li className='content-list-section'>
+                        <h2 className='content-list-head'>📉 Data analysis</h2>
+                        <p> future research should consider temporal change rather than focusing on static data, as culture is evolving over time.</p>
+                    </li>
+                    <div className='content-list-imgs'>
+                        <img src={temp_analysis_1} style={{width: '750px', marginTop: '20px'}} alt='temp_analysis_1'/>
+                        <img src={temp_analysis_2} style={{width: '750px', marginTop: '20px'}} alt='temp_analysis_2'/>
+                    </div>
                 </ul>
             </div>
         </div>

@@ -60,7 +60,7 @@
 }
 
 .contentHead {
-    font-size: 27px;
+    font-size: 18px;
     font-weight: 600;
     color: #353535;
     display: flex;
@@ -77,10 +77,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 10px;
+    padding: 0px 5px;
     font-family: "Ubuntu", sans-serif;
     line-height: 0;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: #669bb7;
     padding-left: 20px;
     padding-right: 20px;
@@ -88,14 +88,14 @@
 }
 
 .contentTag {
-    font-size: 19px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 300;
     color: #ffffff;
     font-family: "Ubuntu", sans-serif;
     width: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .cardContent {
@@ -113,7 +113,7 @@
 
 .contentTitle {
     width: 30%;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 800;
     color: #353535;
     font-family: "Ubuntu", sans-serif;
@@ -126,7 +126,7 @@
 
 .contentText {
     width: 75%;
-    font-size: 19px;
+    font-size: 14px;
     font-weight: 300;
     color: #353535;
     font-family: "Ubuntu", sans-serif;
@@ -279,19 +279,34 @@
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
-/* .vis-title {
-    width: 80%;
+.vis-title {
     display: flex;
-    align-items: start;
+    flex-direction: row;
     justify-content: start;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: 400px;
+    width: 80%;
+    padding: 0;
+}
+
+.vis-title-img {
+    width: auto;
+    flex: 0 1 auto;
+    justify-content: center;
+}
+
+.vis-title-img img {
+    width: 20%;
+    height: auto;
 }
 
 .vis-title-content {
+    margin-left: -20px;
     display: inline-block;
 }
 
@@ -301,7 +316,7 @@
     margin: 0;
     display: inline;
     color: #353535;
-} */
+}
 
 .taxonomy-col {
     display: flex;
@@ -324,8 +339,8 @@
 
 .flip-card {
     background-color: #DEEBF7;
-    width: 280px;
-    height: 200px;
+    width: 220px;
+    height: 160px;
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -378,15 +393,18 @@
 
 .flip-card-content-front h1, .flip-card-content-back h1 {
     line-height: 1.2;
-    font-size: 25px;
+    font-size: 18px;
     padding: 0px;
 }
 
 .flip-card-content-front p, .flip-card-content-back p {
     margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 5px;
     margin-right: 5px;
-    font-size: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-bottom: 0px;
+    font-size: 16px;
 }
 
 .flip-card-content-front h1, .flip-card-content-front p {
@@ -401,4 +419,13 @@
     margin-left: 5px;
     margin-right: 5px;
     color: white;
+}
+
+.results-content p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #353535;
 }

@@ -73,7 +73,7 @@ function DataPage() {
         )
     };
 
-    const FlipCard = ({ title, frontContent, backContent, frontImage }) => {
+    const FlipCard = ({ title, frontContent, backContent, frontImage , frontImageSize}) => {
         const [isFront, setIsFront] = useState(true);
     
         const handleClick = () => {
@@ -85,7 +85,7 @@ function DataPage() {
                 <div className="flip-card-inner" style={{ transform: isFront ? 'rotateY(0deg)' : 'rotateY(180deg)' }}>
                     <div className="flip-card-content-front">
                         <h1 style={{marginTop: '15px'}}>{title}</h1>
-                        <img src={frontImage} style={{ width: '30%', marginTop: '-10px', marginBottom: '0px' }} alt='frontImage'/>
+                        <img src={frontImage} style={{ width: frontImageSize, marginTop: '0px', marginBottom: '0px' }} alt='frontImage'/>
                         <p>{frontContent}</p>
                     </div>
                     <div className="flip-card-content-back">
@@ -189,42 +189,49 @@ function DataPage() {
                         frontContent="Groups of people with similar cultural backgrounds"
                         backContent="e.g. American, Californian, Asian American, international student people from small towns"
                         frontImage={culture_group_icon}
+                        frontImageSize='60px'
                     />
                     <FlipCard
                         title="Context"
                         frontContent="Settings the behavior takes place"
                         backContent="e.g. in France, in public, 4th of July celebrations"
                         frontImage={context_icon}
+                        frontImageSize='60px'
                     />
                     <FlipCard
                         title="Goal"
                         frontContent="What the behavior aims to achieve"
                         backContent="e.g. to adapt to different cultures, to celebrate"
                         frontImage={goal_icon}
+                        frontImageSize='55px'
                     />
                     <FlipCard
                         title="Actor"
                         frontContent="Who exhibit the behavior "
                         backContent="e.g. people, customers, drivers"
                         frontImage={actor_icon}
+                        frontImageSize='55px'
                     />
                     <FlipCard
                         title="Recipient"
                         frontContent="Recipient of the action"
                         backContent="e.g. kids, service staff, passengers"
                         frontImage={recipient_icon}
+                        frontImageSize='55px'
                     />
                     <FlipCard
                         title="Relation"
                         frontContent="Relation between the actor and the recipient"
                         backContent="e.g. parents to children, actor to audience, among friends"
                         frontImage={relation_icon}
+                        frontImageSize='58px'
                     />
                     <FlipCard
                         title="Actor's Behavior"
                         frontContent="Behavior of the actor"
                         backContent="e.g. dress casually, tip to express gratitude, drive on the right "
                         frontImage={actor_behavior_icon}
+                        frontImageSize='55px'
                     />
                     <FlipCard
                         title="Recipient's Behavior"
@@ -232,12 +239,14 @@ function DataPage() {
                         backContent="e.g. respond with thanks, 
                         accept card payments, bag items for the customer"
                         frontImage={recipient_behavior_icon}
+                        frontImageSize='55px'
                     />
                     <FlipCard
                         title="Other Description"
                         frontContent="Anything that cannot fit into the other fields"
                         backContent="e.g. Bangkok is known for its chaotic traffic"
                         frontImage={other_description_icon}
+                        frontImageSize='45px'
                     />
                     <FlipCard
                         title="Topic"
@@ -245,12 +254,14 @@ function DataPage() {
                         backContent="e.g. Social Norms and Etiquette, 
                         Communication and Language, Consumer Behavior"
                         frontImage={topic_icon}
+                        frontImageSize='45px'
                     />
                     <FlipCard
                         title="Agreement"
                         frontContent="Agreement level"
                         backContent="e.g. percentage of people who agree"
                         frontImage={agreement_icon}
+                        frontImageSize='55px'
                     />
                 </div>
             </div>
@@ -263,7 +274,7 @@ function DataPage() {
                 </div>
             </div>
             <div className='intro-fig-container'>
-                <img src={data_framework_fig} style={{ width: '1100px'}} alt="eval_fig" />
+                <img src={data_framework_fig} style={{ width: '800px'}} alt="eval_fig" />
             </div>
             <div className='results-content'>
                 <p>
@@ -315,6 +326,16 @@ function DataPage() {
                     otherDescription="high cost of daycare and challenges in finding trustworthy caregivers"
                     topic="Family Dynamics"
                 />
+            </div>
+            <div className='vis-title'>
+                <div className='vis-title-img'>
+                    <img src={headerImage} alt='headerImage'/>
+                </div>
+                <div className='vis-title-content'>
+                    <h2>Reddit Data Samples</h2>
+                </div>
+            </div>
+            <div className='insightContent'>
                 <ContentCard
                     culturalGroup="Australian"
                     context="shopping and environmental conservation"
@@ -351,7 +372,7 @@ function DataPage() {
                     otherDescription="minimum entitlements and 17% extra on days taken leave"
                     topic="Workplace"
                 />
-                <ContentCard
+                {/* <ContentCard
                     culturalGroup=""
                     context=""
                     goal=""
@@ -362,8 +383,8 @@ function DataPage() {
                     recipientBehavior=""
                     otherDescription=""
                     topic=""
-                />
-                <ContentCard
+                /> */}
+                {/* <ContentCard
                     culturalGroup=""
                     context=""
                     goal=""
@@ -374,7 +395,7 @@ function DataPage() {
                     recipientBehavior=""
                     otherDescription=""
                     topic=""
-                />
+                /> */}
             </div>
         </div>
     )

@@ -1,0 +1,283 @@
+/* .selectors {
+    width: 80%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.unselectedButton {
+    height: 40px;
+    text-decoration: none;
+    background-color: white;
+    color: #353535;
+    border: 2px solid #353535;
+    border-radius: 30px;
+    width: 15%;
+    font-size: 25px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 1px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectedButton {
+    text-decoration: none;
+    background-color: #353535;
+    color: white;
+    border: 2px solid #353535;
+    border-radius: 30px;
+    width: 15%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 1px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.vis-title {
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.vis-title-content {
+    display: inline-block;
+}
+
+.vis-title-content h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    display: inline;
+    color: #353535;
+}
+
+.intro-fig-container {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text {
+    width: 70%;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+}
+
+.samplen-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+    border: 2px solid #c5c5c5;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px #c5c5c5;
+    background-color: #F2F2F2;
+}
+
+.description p {
+    margin-left: 40px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.description h2 {
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.question-components {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.component-persona {
+    width: 73%;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+    border: 2px solid #5B9BD5;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px #DEEBF7;
+    background-color: #DEEBF7;
+}
+
+.component-persona p {
+    margin-left: 40px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.component-persona h2 {
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.component-scenario {
+    width: 22%;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+    border: 2px solid #AA87C8;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px #E8DAF3;
+    background-color: #E8DAF3;
+}
+
+.component-scenario p {
+    margin-left: 40px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.component-scenario h2 {
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.question {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+    border: 2px solid #c5c5c5;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px #c5c5c5;
+    /* background-color: #F2F2F2; */
+    background-color: white;
+}
+
+.question p {
+    margin-left: 40px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.question h2 {
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.evaluation-table {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.results-content {
+    width: 70%;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+}
+
+.model-comparison-container {
+    overflow-x: auto;
+    padding: 15px;
+    font-size: 22px;
+}
+
+.model-comparison {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.model-comparison th, .model-comparison td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.model-comparison th[colspan] {
+    text-align: center;
+}
+
+.model-comparison th[rowspan] {
+    vertical-align: bottom;
+}
+  

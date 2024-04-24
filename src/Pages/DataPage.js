@@ -367,7 +367,7 @@ function DataPage() {
                         otherDescription="oliebollen are a traditional Dutch snack, with carbidschieten being a related custom"
                         topic="Cultural Traditions and Festivals"
                     /> */}
-                    <ContentCard
+                    {/* <ContentCard
                         culturalGroup="Brazilian"
                         context="in Brazil, particularly in supermarkets and street markets"
                         goal="obtain fresh milk"
@@ -376,6 +376,16 @@ function DataPage() {
                         actorBehavior="actively seek and purchase fresh, unpasteurized milk, often in bags or directly from the source"
                         otherDescription="Brazil has different milk grades, with UHT milk lasting up to 2 years, and fresh milk is considered superior"
                         topic="Food and Dining"
+                    /> */}
+                    <ContentCard
+                        culturalGroup="Mexican"
+                        context="primarily in Mexico, with some instances in the United States"
+                        goal=""
+                        agreement="1"
+                        actor="people"
+                        actorBehavior="enjoy drinking horchata, a traditional Mexican beverage made from rice, milk, cinnamon, and sugar"
+                        otherDescription="horchata is often compared to milkshakes and is available in Mexican restaurants"
+                        topic="Consumer Behavior"
                     />
                     <ContentCard
                         culturalGroup="Australian"

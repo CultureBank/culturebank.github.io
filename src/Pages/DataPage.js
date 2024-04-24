@@ -307,16 +307,16 @@ function DataPage() {
                         otherDescription="candy is considered a treat and is typically bought on Saturdays"
                         topic="Food and Dining"
                     />
-                    {/* <ContentCard
+                    <ContentCard
                         culturalGroup="Chinese"
                         context="in China, particularly in urban areas"
                         goal="to make payments and transfer money"
                         agreement="1"
                         actor="people and businesses"
                         actorBehavior="heavily rely on digital and mobile payment methods like WeChat Pay and Alipay, often using facial recognition"
-                        otherDescription=""
+                        otherDescription="NA"
                         topic="Finance and Economy"
-                    /> */}
+                    />
                     {/* <ContentCard
                         culturalGroup="Argentinian"
                         context="in the northern regions including Jujuy, Salta, and the north"
@@ -347,7 +347,7 @@ function DataPage() {
                         otherDescription="prefer straightforward pricing without additional calculations"
                         topic="Consumer Behavior"
                     />
-                    <ContentCard
+                    {/* <ContentCard
                         culturalGroup="Chinese"
                         context="in China during the COVID-19 pandemic"
                         goal="control the spread of COVID-19 and save lives"
@@ -356,7 +356,7 @@ function DataPage() {
                         actorBehavior="implement and follow strict COVID-19 policies, including lockdowns, travel restrictions, and vaccination"
                         otherDescription="China has a high vaccination rate and enforces strict measures to control the pandemic"
                         topic="Health and Hygiene"
-                    />
+                    /> */}
                     {/* <ContentCard
                         culturalGroup="Dutch"
                         context="in the Netherlands and Germany"

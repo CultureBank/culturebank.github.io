@@ -190,12 +190,12 @@ function HomePage() {
                     Dataset
                 </a>
             </div>
-            <div className='intro-fig-container'>
-                <img src={intro_fig} style={{ width: '70%', maxWidth: '2500px'}} alt="introduction_fig" />
-            </div>
             <div className='quote'>
                 <p className='quote-content'> "Globally, people express pride, celebrate, and respect cultural diversity, while acknowledging and working towards reducing cultural bias" </p>
                 <p className='quote-source'> ------ CultureBank </p>
+            </div>
+            <div className='intro-fig-container'>
+                <img src={intro_fig} style={{ width: '70%', maxWidth: '2500px'}} alt="introduction_fig" />
             </div>
             <div className='abstract'>
                 <p> In this project, we explore the <span style={{fontWeight:500}}>cultural awarenesss</span> in language models. To this end, we introduce <span style={{fontWeight:500, fontStyle:'italic'}}>CultureBank</span>, a knowledge base built upon users' self-narratives with <span style={{fontWeight:500}}>12k</span> cultural descriptors sourced from TikTok and <span style={{fontWeight:500}}>11k</span> from Reddit. With CultureBank, we evaluate different LLMs' cultural awareness, and identify areas for improvement. We also fine-tune a language model on CultureBank: experiments show that it achieves better performances on two downstream cultural tasks in a zero-shot setting. Finally, we offer recommendations based on our findings for future culturally aware language technologies. </p>

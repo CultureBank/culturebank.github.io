@@ -216,7 +216,7 @@
 
 .quote-content {
     width: 100%;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     text-align: start;
     font-style: italic;
@@ -227,7 +227,7 @@
 .quote-source {
     width: 100%;
     margin-top: -10px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     text-align: end;
     font-style: italic;

@@ -390,7 +390,7 @@ function DataPage() {
                         otherDescription="emphasis on relative safety, economic opportunity, and a spiritual approach to life and work; distrust of the government; ID is king; communism and socialism as means to achieve equality"
                         topic="Miscellaneous"
                     /> */}
-                    <ContentCard
+                    {/* <ContentCard
                         culturalGroup="Ottoman Empire"
                         context="historical and geographical"
                         goal="remove and eradicate minority presence"
@@ -398,6 +398,16 @@ function DataPage() {
                         actor="the Ottoman Empire"
                         actorBehavior="perpetrated genocide and ethnic cleansing, leading to mass displacement and murder of minority groups"
                         otherDescription="occurred over a long period, influenced by Christian religions of victims, and resulted in significant cultural and demographic changes"
+                        topic="Miscellaneous"
+                    /> */}
+                    <ContentCard
+                        culturalGroup="French"
+                        context="music scene in France"
+                        goal="entertainment, self-expression, and appreciation of music"
+                        agreement="0.2"
+                        actor="French musicians and audiences"
+                        actorBehavior="create, produce, and listen to a diverse range of music including garage rock, punk, alternative, rap, and electro"
+                        otherDescription="influence from Michel Audiard and underground music scenes like Frenchcore/hardtek"
                         topic="Miscellaneous"
                     />
                     <ContentCard
@@ -408,7 +418,7 @@ function DataPage() {
                         actor="People"
                         actorBehavior="Express pride, celebrate, and respect cultural diversity, while acknowledging and working towards reducing racism and cultural bias"
                         otherDescription="Includes a desire to reduce hostility and hateful generalizations"
-                        topic="Cultural and Environmental Appreciation"
+                        topic="Cultural Traditions and Festivals"
                     />
                     <ContentCard
                         culturalGroup="Baby Boomers"
@@ -417,8 +427,8 @@ function DataPage() {
                         agreement="0.4"
                         actor="Baby Boomers"
                         actorBehavior="believe in hard work for prosperity, enjoy benefits from low cost housing, education, and social services, and hold beliefs about bootstrapping"
-                        otherDescription="next generations and younger Americans"
-                        topic="struggle with debt and finding decent work"
+                        otherDescription="perceived as ignorant and unwilling to acknowledge structural barriers faced by younger generations"
+                        topic="Workplace"
                     />
                     <ContentCard
                         culturalGroup="Cajuns"

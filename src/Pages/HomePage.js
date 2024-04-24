@@ -157,8 +157,8 @@ function HomePage() {
                 <NavLink to="/evaluation" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
                     Evaluation
                 </NavLink>
-                <NavLink to="/discussion" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
-                    Discussion
+                <NavLink to="/insights" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
+                    Insights
                 </NavLink>
             </div>
             <div className='link-buttons'>
@@ -171,7 +171,7 @@ function HomePage() {
                     <img src={codeIcon} style={{ width: '20px', marginRight: '13px' }} alt="GitHub Link Icon" />
                     Code
                 </a>
-                <a href="https://github.com/SALT-NLP/CultureBank"
+                <a href="https://arxiv.org/abs/2404.15238"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="linkButton"

@@ -32,44 +32,48 @@ function EvaluationPage() {
         };
     
         return (
-            <div className='sample-section'>
+            <>
                 {isFront ? (
-                    <div className='sample-section-container'>
-                        <div className='description'>
-                            <h2>Cultural Descriptor</h2>
-                            <p>{culturalDescriptor}</p>
-                        </div>
-                        <div className='divider' style={{ padding: '0px', marginTop: '5px', marginBottom: '5px', borderTop: '2px dashed #ccc', width: '90%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}></div>
-                        <div className='question-components'>
-                            <div className='component-persona'>
-                                <h2>Persona</h2>
-                                <p>{persona}</p>
+                    <div className='sample-section'>
+                        <div className='sample-section-container'>
+                            <div className='description'>
+                                <h2>Cultural Descriptor</h2>
+                                <p>{culturalDescriptor}</p>
                             </div>
-                            <div className='component-scenario'>
-                                <h2>Scenario</h2>
-                                <p>{scenario}</p>
+                            <div className='divider' style={{ padding: '0px', marginTop: '0px', marginBottom: '0px', borderTop: '2px dashed #ccc', width: '90%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}></div>
+                            <div className='question-components'>
+                                <div className='component-persona'>
+                                    <h2>Persona</h2>
+                                    <p>{persona}</p>
+                                </div>
+                                <div className='component-scenario'>
+                                    <h2>Scenario</h2>
+                                    <p>{scenario}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className='instruction'>
-                            <button onClick={() => handleClick()}>
-                                👆🏼 Click to generate question
-                            </button>
+                            <div className='instruction'>
+                                <button onClick={handleClick}>
+                                    👆🏼 Click to generate question
+                                </button>
+                            </div>
                         </div>
                     </div>
                 ) : (
-                    <div className='sample-section-container'>
-                        <div className='question'>
-                            <h2>Question</h2>
-                            <p>{question}</p>
-                        </div>
-                        <div className='instruction'>
-                            <button onClick={() => handleClick()}>
-                                ⬅️ Go back
-                            </button>
+                    <div className='sample-section' style={{backgroundColor: '#c5c5c5'}}>
+                        <div className='sample-section-container'>
+                            <div className='question'>
+                                <h2>Question</h2>
+                                <p>{question}</p>
+                            </div>
+                            <div className='instruction'>
+                                <button onClick={handleClick}>
+                                    ⬅️ Go back
+                                </button>
+                            </div>
                         </div>
                     </div>
                 )}
-            </div>
+            </>
         );
     };
 
@@ -287,8 +291,8 @@ function EvaluationPage() {
                 <NavLink to="/evaluation" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
                     Evaluation
                 </NavLink>
-                <NavLink to="/discussion" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
-                    Discussion
+                <NavLink to="/insights" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
+                    Insights
                 </NavLink>
             </div>
             <div className='link-buttons'>
@@ -301,7 +305,7 @@ function EvaluationPage() {
                     <img src={codeIcon} style={{ width: '20px', marginRight: '13px' }} alt="GitHub Link Icon" />
                     Code
                 </a>
-                <a href="https://github.com/SALT-NLP/CultureBank"
+                <a href="https://arxiv.org/abs/2404.15238"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="linkButton"
@@ -407,6 +411,7 @@ function EvaluationPage() {
                     Zero-shot cultural awareness on GlobalOpinionQA and CultureNLI. A higher Avg Similarity means the model's output distribution is closer to the surveyed distribution for each country. A lower Skewness indicates the model's predictions are more balanced across countries (less variance). US and IN show the F1 score on US and India. In GlobalOpinionQA, GPTs' results are NA because we do not have access to their logit distributions.
                 </p>
             </div>
+            <div style={{height: '1000px', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0'}}/>
         </div>
     )
 }

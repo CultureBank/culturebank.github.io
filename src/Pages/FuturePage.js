@@ -57,8 +57,8 @@ function FuturePage() {
                 <NavLink to="/evaluation" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
                     Evaluation
                 </NavLink>
-                <NavLink to="/discussion" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
-                    Discussion
+                <NavLink to="/insights" className={({ isActive }) => isActive ? "selectedButton" : "unselectedButton"}>
+                    Insights
                 </NavLink>
             </div>
             <div className='link-buttons'>
@@ -71,7 +71,7 @@ function FuturePage() {
                     <img src={codeIcon} style={{ width: '20px', marginRight: '13px' }} alt="GitHub Link Icon" />
                     Code
                 </a>
-                <a href="https://github.com/SALT-NLP/CultureBank"
+                <a href="https://arxiv.org/abs/2404.15238"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="linkButton"
@@ -91,13 +91,13 @@ function FuturePage() {
                 </a>
             </div>
             <div className='vis-title'>
-                    <div className='vis-title-img'>
-                        <img src={headerImage} alt='headerImage'/>
-                    </div>
-                    <div className='vis-title-content'>
-                        <h2>Cultural knowledge data</h2>
-                    </div>
+                <div className='vis-title-img'>
+                    <img src={headerImage} alt='headerImage'/>
                 </div>
+                <div className='vis-title-content'>
+                    <h2>Cultural knowledge data</h2>
+                </div>
+            </div>
             <div className='content-list'>
                 <ul>
                     <li className='content-list-section'>
@@ -125,6 +125,39 @@ function FuturePage() {
                     </div>
                 </ul>
             </div>
+            <div className='vis-title'>
+                <div className='vis-title-img'>
+                    <img src={headerImage} alt='headerImage'/>
+                </div>
+                <div className='vis-title-content'>
+                    <h2>Cultural awareness evaluation</h2>
+                </div>
+            </div>
+            <div className='content-list'>
+                <li className='content-list-section'>
+                    <h2 className='content-list-head'>📝 Challenges of Human Annotation</h2>
+                    <p>In our evaluation, humans also find it difficult to decide which model response is more culturally aware, partly because they are not from the presented cultural group. As we spend more effort on cultural data resources, it is also increasingly important to involve <span style={{fontWeight:600}}>global annotators</span> to enable more accurate evaluation.</p>
+                </li>
+                <li className='content-list-section'>
+                    <h2 className='content-list-head'>⚠️ Limitation of Direct Evaluation</h2>
+                    <p>As shown in our findings, direct and <span style={{fontWeight:600}}>grounded evaluations</span> give different results.</p>
+                </li>
+            </div>
+            <div className='vis-title'>
+                <div className='vis-title-img'>
+                    <img src={headerImage} alt='headerImage'/>
+                </div>
+                <div className='vis-title-content'>
+                    <h2>Training culturally-aware language technologies</h2>
+                </div>
+            </div>
+            <div className='content-list'>
+                <p>We realize that when fine-tuning models for cultural awareness, training only on the cultural knowledge or the grounded QA tasks could be insufficient. Take training a culturally-aware conversational assistant as an example.</p>
+                <p>🔄 It requires appropriate cultural data grounded in <span style={{fontWeight:600}}>multi-turn conversational</span> settings.</p>
+                <p>📄 It requires a <span style={{fontWeight:600}}>well-designed training paradigm</span> to attend to the cultural nuances potentially implicit in the dialogue context.</p>
+                <p>✏️ It also needs a <span style={{fontWeight:600}}>solid evaluation method</span> to rate the culture awareness of the generated responses, to help the model improve and evolve. Such a model needs to have a holistic view of the user cultural background, a personalized recognition of individual differences, and an inclusive mind for new cultural concepts and practices.</p>
+            </div>
+            <div style={{height: '1000px', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0'}}/>
         </div>
     )
 }

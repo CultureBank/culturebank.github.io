@@ -121,9 +121,8 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    /* margin-bottom: 20px; */
-    /* width: 70%; */
     padding: 0;
+    flex-direction: column;
     font-weight: 300;
     display: flex;
     justify-content: center;
@@ -131,10 +130,6 @@
     text-align: start;
     font-family: "Ubuntu", sans-serif;
     line-height: 1.8;
-    /* border: 2px solid #c5c5c5; */
-    /* border-radius: 20px; */
-    /* box-shadow: 2px 4px 4px #c5c5c5; */
-    /* background-color: #F2F2F2; */
 }
 
 .instruction {
@@ -173,6 +168,7 @@
 }
 
 .description p {
+    margin-top: -20px;
     margin-left: 40px;
     font-size: 16px;
     font-weight: 300;
@@ -278,7 +274,6 @@
     /* border-radius: 20px; */
     /* box-shadow: 2px 4px 4px #c5c5c5; */
     /* background-color: #F2F2F2; */
-    /* background-color: white; */
 }
 
 .question p {

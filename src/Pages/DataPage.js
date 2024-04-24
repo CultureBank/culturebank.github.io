@@ -327,7 +327,7 @@ function DataPage() {
                         otherDescription=""
                         topic="Food and Dining"
                     /> */}
-                    <ContentCard
+                    {/* <ContentCard
                         culturalGroup="Canadian"
                         context="in Canada, particularly in Vancouver"
                         goal="express gratitude and ensure fair compensation"
@@ -336,6 +336,16 @@ function DataPage() {
                         actorBehavior="practice tipping, often at 20% or more, to express gratitude and ensure reasonable wages for servers"
                         otherDescription="tipping is considered a norm and is expected even with poor service"
                         topic="Social Norms and Etiquette"
+                    /> */}
+                    <ContentCard
+                        culturalGroup="South African"
+                        context="when paying for items"
+                        goal=""
+                        agreement="0.1"
+                        actor="people"
+                        actorBehavior="express frustration over having to calculate prices and taxes"
+                        otherDescription="prefer straightforward pricing without additional calculations"
+                        topic="Consumer Behavior"
                     />
                     <ContentCard
                         culturalGroup="Chinese"
@@ -347,7 +357,7 @@ function DataPage() {
                         otherDescription="China has a high vaccination rate and enforces strict measures to control the pandemic"
                         topic="Health and Hygiene"
                     />
-                    <ContentCard
+                    {/* <ContentCard
                         culturalGroup="Dutch"
                         context="in the Netherlands and Germany"
                         goal="to provide and enjoy food"
@@ -356,6 +366,16 @@ function DataPage() {
                         actorBehavior="make and enjoy traditional snacks like oliebollen and bitterballen, spending hours in the kitchen and eating them as a popular snack"
                         otherDescription="oliebollen are a traditional Dutch snack, with carbidschieten being a related custom"
                         topic="Cultural Traditions and Festivals"
+                    /> */}
+                    <ContentCard
+                        culturalGroup="Brazilian"
+                        context="in Brazil, particularly in supermarkets and street markets"
+                        goal="obtain fresh milk"
+                        agreement="0.9"
+                        actor="people and consumers"
+                        actorBehavior="actively seek and purchase fresh, unpasteurized milk, often in bags or directly from the source"
+                        otherDescription="Brazil has different milk grades, with UHT milk lasting up to 2 years, and fresh milk is considered superior"
+                        topic="Food and Dining"
                     />
                     <ContentCard
                         culturalGroup="Australian"
@@ -401,14 +421,14 @@ function DataPage() {
                         topic="Miscellaneous"
                     /> */}
                     <ContentCard
-                        culturalGroup="French"
-                        context="music scene in France"
-                        goal="entertainment, self-expression, and appreciation of music"
-                        agreement="0.2"
-                        actor="French musicians and audiences"
-                        actorBehavior="create, produce, and listen to a diverse range of music including garage rock, punk, alternative, rap, and electro"
-                        otherDescription="influence from Michel Audiard and underground music scenes like Frenchcore/hardtek"
-                        topic="Miscellaneous"
+                        culturalGroup="Mexico"
+                        context="across various settings including government, food, and population"
+                        goal="to maintain cultural identity and adapt to new environments"
+                        agreement="1"
+                        actor="people in Mexico and Mexican-Americans"
+                        actorBehavior="display a mix of Mexican and American influences, including food, language, and governmental practices"
+                        otherDescription="Mexico's large land mass and population contribute to its significant cultural influence"
+                        topic="Cultural Exchange"
                     />
                     <ContentCard
                         culturalGroup="Global"

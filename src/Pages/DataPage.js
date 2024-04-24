@@ -337,7 +337,7 @@ function DataPage() {
                         otherDescription="tipping is considered a norm and is expected even with poor service"
                         topic="Social Norms and Etiquette"
                     /> */}
-                    <ContentCard
+                    {/* <ContentCard
                         culturalGroup="South African"
                         context="when paying for items"
                         goal=""
@@ -346,6 +346,16 @@ function DataPage() {
                         actorBehavior="express frustration over having to calculate prices and taxes"
                         otherDescription="prefer straightforward pricing without additional calculations"
                         topic="Consumer Behavior"
+                    /> */}
+                    <ContentCard
+                        culturalGroup="Rwandan"
+                        context="in Rwanda and among Rwandan communities"
+                        goal=""
+                        agreement="1"
+                        actor="people"
+                        actorBehavior="speak Kinyarwanda, Swahili, and English, with Kinyarwanda being the primary language"
+                        otherDescription="NA"
+                        topic="Communication and Language"
                     />
                     {/* <ContentCard
                         culturalGroup="Chinese"

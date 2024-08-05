@@ -392,7 +392,7 @@ function EvaluationPage() {
             </div>
             <div className='results-content'>
                 <p>
-                Human evaluation on win rates between different LLMs (50 examples per pair) evaluated by humans on cultural-awareness in grounded consulting scenarios. The two annotators achieved a Kappa score of 0.87.
+                    Human evaluation on win rates between different LLMs (50 examples per pair) evaluated by humans on cultural-awareness in grounded consulting scenarios. The two annotators achieved a Kappa score of 0.87.
                 </p>
             </div>
             <div className='vis-title'>
